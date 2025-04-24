@@ -1,0 +1,144 @@
+body {
+    
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #000000;
+    color: #fff;
+    overflow-x: hidden;
+    }
+    
+    .tela-inicial {
+    height: 120vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    }
+    .imagem-inicial{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(255,0,0.3);
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* para que a imagem fique atrás dos outros elementos */
+}
+
+     .imagem-inicial img {
+     width: 100%;
+     max-width:300px; /* diminui o tamanho máximo */ 
+     height: auto;
+     display: block;
+     margin:0 auto;
+}
+    
+    
+    .selo {
+    background-color: rgba(235, 138, 135, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(255,0,0.3);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 0.05vw, 0.2vw, 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    top: 40%;
+    left: 55%;
+    z-index: 30;
+    }
+   
+    
+    .convite {
+    display: none;
+    background: url('mine-homem-aranha.jpg') no-repeat center/cover;
+    padding: 40px 20px;
+    min-height: 100vh;
+    }
+    
+    .conteudo {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.9);
+    color: #800000;
+    padding: 30px;
+    border-radius: 15px;
+    }
+    
+    .titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    }
+    
+    .nomes {
+    font-family: 'Georgia', serif, 'serif';
+    font-size: 36px;
+    color: #000000;
+    }
+    
+    .info {
+    margin-top: 20px;
+    font-size: 18px;
+    }
+    
+    .icones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    }
+    
+    .icone {
+    text-align: center;
+    margin: 15px;
+    }
+    
+    .icone img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    }
+    
+    .imagem {
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px 0;
+    }
+    
+    footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #420000;
+    }
+    
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+    
+    /* Responsividade */
+    @media screen and (max-width: 768px) {
+    .selo {
+    width: 120px;
+    height: 120px;
+    font-size: 28px;
+    }
+    .conteudo {
+    padding: 20px;
+    }
+    .titulo {
+    font-size: 24px;
+    }
+    .nomes {
+    font-size: 28px;
+    }
+    }

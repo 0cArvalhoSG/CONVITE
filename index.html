@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Convite de aniversário | GABRIEL 10 ANOS!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="tela-inicial">
+
+ <img src="maioral.jpg" alt="Imagem de Fundo" class="imagem-inicial">
+
+<div class="selo" onclick="abrirConvite()">clique e abra o convite</div>
+
+<p>GABRIEL 10 ANOS!</p>
+
+</div>
+
+
+<div class="convite" id="convite" style="display: none;">
+
+<div class="conteudo">
+
+<img src="ani-miranha.jpg" alt="Personagem" class="imagem">
+
+
+
+<div class="titulo">"10 ANOS DO NOSSO PEQUENO HERÓI ."</div>
+
+<p class="nomes">GABRIEL</p>
+
+
+
+<div class="info">
+
+<p>Com muito carinho, juntamente com sua mãe;</p>
+
+<p>Convidam você(s) para a festa de aniversário de 10 anos que será realizada em:</p>
+
+<p><strong>15 de julho de 2025</strong><br>Sábado, às 16:00<br>Espaço Jardim Real, Marialva - PR</p>
+
+</div>
+
+
+
+<div class="icones">
+
+<div class="icone">
+
+<a href="https://maps.google.com?q=EspaçoJardim Real, Marialva - PR" target="_blank">
+
+<img src="loca.jpg" alt="Local da festa">
+
+<p>Festa de Aniversário Localização </p>
+
+</a>
+
+</div>
+
+
+
+</div>
+
+<div class="icone">
+
+<a id="confirmarLink" target="_blank">
+
+<img src="zap.jpg" alt="Confirmar Presença">
+
+<p>Confirmar</p>
+
+</a>
+
+</div>
+
+
+
+<img src="mirainha.jpg" alt="Personagem Rodapé" class="imagem">
+
+
+
+<div class="mensagem-final">AGUARDAMOS POR VOCÊ(s) PARA COMEMORAR ESSE MOMENTO TÃO ESPECIAL!</div>
+
+
+
+<footer>
+
+© 2025 GABRIEL FAZ 10 ANOS | Convite criado por Vanessa Carvalho
+
+</footer>
+
+
+
+<!-- Script aqui no final do body -->
+
+<script>
+
+function abrirConvite() {
+
+document.querySelector('.tela-inicial').style.display = 'none';
+
+document.getElementById('convite').style.display = 'block';
+
+}
+
+
+
+window.onload = function () {
+
+const params = new URLSearchParams(window.location.search);
+
+const nomeConvidado = params.get('nome') || 'Convidado';
+
+
+
+const mensagem = `Olá, aqui é o(a) ${nomeConvidado}. Confirmo minha presença no aniversário do nosso  pequeno herói Gabriel. Será uma honra participar desse momento especial!`;
+const telefone = '5544998331676';
+
+const linkWhatsApp = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+const confirmarLink = document.getElementById('confirmarLink');
+
+if (confirmarLink) {
+
+confirmarLink.href = linkWhatsApp;
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
